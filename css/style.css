@@ -4,17 +4,64 @@
   box-sizing: border-box;
 }
 
+/* Common CSS */
+.btn-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #FFF;
+  color: #000;
+  border-radius: 20px;
+}
+
 /* Header */
-.upgrade-bar {
+header {
   /* debug */
-  min-height: 80px;
+  padding-left: 20%;
+}
+
+.upgrade-bar {
+  height: 80px;
+  width: 100%;
+  padding-left: 20%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 70;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 20px;
+  /* background-color: rgba(0,0,0,.6); */
+
+  /* debug*/
   background-color: red;
 }
 
-.nav-links {
-  /* debug*/
+.nav-menu {
   min-height: 80px;
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #141922;
+  border: 1px solid #FFF; */
+
+  /* debug */
   background-color: green;
+  border: 1px solid #000;
+}
+
+.nav-menu .nav-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nav-menu .nav-links li {
+  list-style-type: none;
+  min-width: 80px;
+  text-align: center;
+  border: 1px solid #000;
 }
 
 /* Main */
@@ -26,31 +73,44 @@ main .container {
 
 
 main section {
-  /* debug */
   width: 100%;
   min-height: 300px;
+  padding-left: 20%;
+  /* background-color: #141922;
+  border: 1px solid #FFF; */
+
+  /*debug*/
   background-color: yellow;
   border: 1px solid #000;
 }
 
 .sidebar-menu {
-  /* debug */
   height: 100vh;
-  background-color: purple;
+  /* background-color: #000; */
   width: 20%;
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 80;
+
+  /* debug*/
+  background-color: purple;
+  border: 1px solid #000;
 }
 
 
 /* Footer */
 footer {
-  /* debug */
   height: 100px;
   width: 100%;
-  background-color: blue;
+  /* background-color: #282828;
+  border: 1px solid #FFF; */
   position: fixed;
   bottom: 0;
   left: 0;
+  z-index: 99;
+
+  /* debug */
+  background-color: blue;
+  border: 1px solid #000;
 }
