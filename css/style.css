@@ -295,6 +295,7 @@ footer .player {
 
 footer .player-actions {
   display: flex;
+  flex-basis: 100%;
   justify-content: center;
   align-items: center;
   background-color: yellow;
@@ -304,18 +305,22 @@ footer .player-actions li {
   padding: 0 30px;
 }
 
-footer .player .player-bar {
+footer .player-bar {
   background-color: pink;
+  flex-basis: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+footer .player .player-bar li:nth-child(2) {
+  flex-basis: 50%;
+}
+
 footer .player .progress-bar {
+
   height: 10px;
   background-color: red;
-  width: 400px;
-  flex-basis: 100%;
 }
 
 /* Song controls */
