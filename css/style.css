@@ -82,6 +82,7 @@ main section {
   border: 1px solid #000;
 }
 
+/* Sidebar */
 .sidebar-menu {
   height: 100vh;
   /* background-color: #000; */
@@ -96,6 +97,13 @@ main section {
   border: 1px solid #000
 }
 
+.side-bar-menu .container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Sections */
+
 main .container {
   display: flex;
   justify-content: flex-start;
@@ -105,6 +113,7 @@ main .container {
 main .column {
   display: flex;
   justify-content: center;
+  align-items: baseline;
   background-color: orange;
   width: calc(100% / 6);
   border: 1px solid #000;
@@ -112,9 +121,10 @@ main .column {
 
 main .column .image-box {
   max-width: 180px;
-  min-width: 100px;
+  min-width: 50px;
   background-color: pink;
   border: 2px solid blue;
+  text-align: center;
 }
 
 main .column .image-box > img {
@@ -143,10 +153,6 @@ footer {
 
 @media all and (max-width: 991.99px) {
 
-  main .container {
-    flex-wrap: wrap;
-  }
-
   main .column {
     width: 25%;
   }
@@ -154,6 +160,9 @@ footer {
 }
 
 @media all and (max-width: 767.99px) {
+  main section .container {
+    flex-wrap: wrap;
+  }
 
   main .column {
     width: calc(100% / 3);
