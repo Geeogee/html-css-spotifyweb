@@ -26,13 +26,9 @@ header, main section {
 }
 
 .separator {
-  display: block;
-  height: 2px;
-  width: 80%;
-  margin: 0 auto;
+  height: 1px;
   background-color: #FFF;
 }
-
 
 /* Header */
 .upgrade-bar {
@@ -182,7 +178,21 @@ main section {
   border: 1px solid #000;
   display: flex;
   align-items: flex-end;
+  align-content: flex-end;
+  flex-wrap: wrap;
 
+}
+
+.sidebar-menu .user-profile .install-link,
+.sidebar-menu .user-profile .profile {
+  flex-basis: 100%;
+  padding: 5px 0;
+}
+
+
+.sidebar-menu .install-link a {
+  display: flex;
+  align-items: center;
 }
 
 .sidebar-menu .user-profile .small-icon {
@@ -190,10 +200,11 @@ main section {
   margin-right: 10px;
 }
 
-.sidebar-menu .install-link a {
-  display: flex;
-  align-items: center;
+.sidebar-menu .user-profile .separator {
+  flex-basis: 80%;
 }
+
+
 
 /* Sections */
 
@@ -226,7 +237,7 @@ main .column .image-box > img {
 
 /* Footer */
 footer {
-  height: 100px;
+  min-height: 100px;
   width: 100%;
   /* background-color: #282828;
   border: 1px solid #FFF; */
