@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify Web App</title>
     <!-- Font awesome CDN -->
-    <link re="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
@@ -163,7 +163,10 @@
             <div class="separator"></div>
 
             <div class="profile">
-              <span>John Doe </span>
+              <a href="#">
+                <img class="small-icon" src="img/profile.svg">
+                <span>John Doe</span>
+              </a>
             </div>
 
           </div>
@@ -284,6 +287,54 @@
 
     <!-- Footer with player and controls-->
     <footer>
+
+      <ul class="song-descr">
+        <li>
+          <div class="image-box">
+            <img src="img/sinister.jpeg">
+          </div>
+        </li>
+        <li>
+          <div class="song-name">
+            Sinister
+          </div>
+          <div class="song-artist">
+            Artist
+          </div>
+        </li>
+        <li>
+          <div class="song-cta">
+            <i class="far fa-folder"></i>
+            <i class="far fa-heart"></i>
+          </div>
+        </li>
+      </ul>
+
+      <div class="player">
+        <ul class="player-actions">
+          <li><i class="fas fa-random"></i></li>
+          <li><i class="fas fa-step-backward"></i></li>
+          <li><i class="far fa-play-circle"></i></li>
+          <li><i class="fas fa-step-forward"></i></li>
+          <li><i class="fas fa-redo"></i></li>
+        </ul>
+
+        <ul class="player-bar">
+          <li>0:25</li>
+          <li><div class="progress-bar"></div></li>
+          <li>4:33</li>
+        </ul>
+
+      </div>
+
+      <ul class="song-controls">
+        <li><i class="fas fa-list-ul"></i></li>
+        <li><i class="fas fa-desktop"></i></li>
+        <li><i class="fas fa-volume-up"></i></li>
+        <li>
+
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

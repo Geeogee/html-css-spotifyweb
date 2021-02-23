@@ -28,6 +28,8 @@ header, main section {
 .separator {
   height: 1px;
   background-color: #FFF;
+  width: 80%;
+  margin: 0 auto;
 }
 
 /* Header */
@@ -155,6 +157,9 @@ main section {
   padding-left: 20px;
   background-color: pink;
   border: 1px solid #000;
+  /* takes all the empty space and pushes user
+  profile in the bottom of the side bar */
+  flex-grow: 1;
 }
 
 .sidebar-menu .btn-link {
@@ -162,17 +167,16 @@ main section {
   padding: 5px 10px;
   font-weight: 700;
   font-size: 20px;
+
 }
 
 .sidebar-menu .playlist-added {
   list-style-type: none;
   background-color: red;
-  height: 25vh;
   overflow-y: auto;
 }
 
 .user-profile {
-  height: calc(100% - 25vh - 180px);
   padding-left: 15px;
   background-color: red;
   border: 1px solid #000;
@@ -180,7 +184,6 @@ main section {
   align-items: flex-end;
   align-content: flex-end;
   flex-wrap: wrap;
-
 }
 
 .sidebar-menu .user-profile .install-link,
@@ -200,9 +203,6 @@ main section {
   margin-right: 10px;
 }
 
-.sidebar-menu .user-profile .separator {
-  flex-basis: 80%;
-}
 
 
 
@@ -245,11 +245,86 @@ footer {
   bottom: 0;
   left: 0;
   z-index: 99;
-
+  display: flex;
+  justify-content: space-between;
   /* debug */
   background-color: blue;
   border: 1px solid #000;
 }
+
+footer ul {
+  list-style-type: none;
+}
+
+footer .song-descr,
+footer .player,
+footer .song-controls {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid #000;
+}
+
+/* Song name */
+footer .song-descr li {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+}
+
+footer .song-descr .image-box {
+  height: 40px;
+  width: 40px;
+}
+
+footer .song-descr .image-box > img {
+  max-width: 100%;
+}
+
+footer .song-descr .song-name,
+footer .song-descr .song-artist {
+  flex-basis: 100%;
+}
+
+/* Song player */
+footer .player {
+  flex-grow: 2;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+footer .player-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: yellow;
+}
+
+footer .player-actions li {
+  padding: 0 30px;
+}
+
+footer .player .player-bar {
+  background-color: pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .player .progress-bar {
+  height: 10px;
+  background-color: red;
+  width: 400px;
+  flex-basis: 100%;
+}
+
+/* Song controls */
+
+footer .song-controls {
+  display: flex;
+}
+
+
 
 @media all and (max-width: 1199.99px) {
 
@@ -293,12 +368,22 @@ footer {
     display: none;
   }
 
+  .sidebar-menu .container-playlist > * {
+    display: none;
+  }
+
+  .sidebar-menu .user-profile span {
+    display: none;
+  }
+
   .sidebar-menu .nav-links {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
+  .container-playlist,
+  .user-profile,
   .sidebar-menu .nav-links a{
     padding-left: 0;
   }
