@@ -22,6 +22,7 @@ header, main section {
   background-color: #FFF;
   color: #000;
   border-radius: 20px;
+  text-decoration: none;
 }
 
 /* Header */
@@ -93,56 +94,50 @@ main section {
   z-index: 99;
   display: flex;
   flex-direction: column;
-
-
   /* debug*/
   background-color: purple;
   border: 1px solid #000
 }
 
-/* Logo and nav links */
-.sidebar-menu .logo-container {
-  height: 80px;
+/* debug */
+.container-logo {
+  height: 60px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-.sidebar-menu #logo {
-  width: 150px;
+#logo {
+  height: 40px;
 }
 
-.sidebar-menu #small-logo {
-  width: 25px;
+#small-logo {
   display: none;
+  width: 25px;
 }
 
 .sidebar-menu .nav-links {
   list-style-type: none;
+  background-color: green;
+  border: 1px solid #000;
 }
 
-/* debug*/
 .sidebar-menu .nav-links li {
+  height: 40px;
+  background-color: yellow;
   border: 1px solid #000;
 }
 
 .sidebar-menu .nav-links a {
-  display: block;
-  text-decoration: none;
   padding-left: 20px;
-
-  /* debug */
-  background-color: red;
+  display: flex;
+  align-items: center;
+  background-color: blue;
+  height: 100%;
 }
 
-.sidebar-menu .small-ico {
-  width: 25px;
-  vertical-align: middle;
-}
-
-.sidebar-menu .nav-links a > span {
-  margin-left: 5px;
-  font-weight: bold;
-  vertical-align: middle;
+.sidebar-menu .small-icon {
+  height: 25px;
 }
 
 .sidebar-menu .nav-links a:hover {
@@ -151,12 +146,32 @@ main section {
 }
 
 
-/* Playlists */
-.sidebar-menu .added_playlist {
-  max-height: 50px;
+.container-playlist {
+
+  padding-left: 20px;
+  background-color: pink;
+  border: 1px solid #000;
 }
 
+.sidebar-menu .btn-link {
+  border-radius: 0;
+  padding: 5px 10px;
+  font-weight: 700;
+  font-size: 20px;
+}
 
+.sidebar-menu .playlist-added {
+  list-style-type: none;
+  background-color: red;
+  height: 25vh;
+  overflow-y: auto;
+}
+
+.user-profile {
+  background-color: red;
+  border: 1px solid #000;
+  display: flex;
+}
 
 /* Sections */
 
@@ -239,6 +254,25 @@ footer {
 
   .sidebar-menu #logo {
     display: none;
+  }
+
+  .sidebar-menu .nav-links span {
+    display: none;
+  }
+
+  .sidebar-menu .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar-menu .nav-links a{
+    padding-left: 0;
+  }
+
+  .sidebar-menu .nav-links a:hover {
+    padding-left: 0;
+    border-left: 0;
   }
 
   .sidebar-menu #small-logo {
