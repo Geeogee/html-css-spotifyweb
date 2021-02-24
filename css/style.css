@@ -8,6 +8,20 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+}
+
+/* Typography */
+h3, h5 {
+  color: #FFF;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 12px;
 }
 
 /* margin left because of the side-menù in fixed */
@@ -40,6 +54,8 @@ main {
 }
 
 /* Header */
+
+/* Uograde bar */
 .upgrade-bar {
   width: 100%;
   height: 80px;
@@ -54,6 +70,20 @@ main {
   background-color: rgba(0,0,0,.5);
 }
 
+.upgrade-bar .btn-link {
+  background-color: transparent;
+  color: #FFF;
+  font-weight: 600;
+  border: 2px solid #FFF;
+  text-transform: uppercase;
+  transition: transform .3s;
+}
+
+.upgrade-bar .btn-link:hover {
+  transform: scale(1.1);
+}
+
+/* Nav menu */
 .nav-menu {
   min-height: 160px;
   padding-top: 80px;
@@ -82,11 +112,27 @@ main {
   font-weight: 600;
   font-size: 14px;
   text-decoration: none;
+  display: inline-block;
+}
+
+.nav-menu .nav-links a:hover {
+  color: #FFF;
+}
+
+.nav-menu .nav-links .active-green {
+  height: 4px;
+  width: 40%;
+  margin: 0 auto;
+  background-color: #adff2f;
+  transition: width 1s;
+
+}
+
+.nav-menu .nav-links a:hover .active-green {
+  width: 100%;
 }
 
 /* Main */
-
-
 main section {
   background-color: #141922;
   color: #7d7f84;
@@ -103,11 +149,16 @@ main section {
   z-index: 99;
   display: flex;
   flex-direction: column;
+  color: #7d7f84;
 }
 
 .sidebar-menu a {
   text-decoration: none;
   color: #7d7f84;
+}
+
+.sidebar-menu a:hover {
+  color: #FFF;
 }
 
 .container-logo {
@@ -128,6 +179,7 @@ main section {
 
 .sidebar-menu .nav-links {
   list-style-type: none;
+  padding: 20px 0;
 }
 
 
@@ -155,12 +207,23 @@ main section {
   flex-grow: 1;
 }
 
-.sidebar-menu .btn-link {
-  border-radius: 0;
+.container-playlist h3 {
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.sidebar-menu .container-playlist .add-button {
   padding: 5px 10px;
   font-weight: 700;
   font-size: 20px;
+  color: #000;
+  background-color: #7d7f84;
+  display: inline-block;
+}
 
+.sidebar-menu .container-playlist a:hover .add-button {
+  background-color: #FFF;
 }
 
 .sidebar-menu .playlist-added {
@@ -168,30 +231,41 @@ main section {
   overflow-y: auto;
 }
 
+.sidebar-menu .playlist-added li {
+  padding: 5px 0;
+}
+
 .user-profile {
-  padding-left: 15px;
+  padding-left: 20px;
   display: flex;
-  align-items: flex-end;
-  align-content: flex-end;
   flex-wrap: wrap;
 }
 
 .sidebar-menu .user-profile .install-link,
+.sidebar-menu .user-profile .separator,
 .sidebar-menu .user-profile .profile {
   flex-basis: 100%;
+}
+
+.sidebar-menu .user-profile .install-link,
+.sidebar-menu .user-profile .profile {
   padding: 5px 0;
 }
 
+.sidebar-menu .user-profile .separator {
+  margin-right: 20px;
+}
 
 .sidebar-menu .install-link a {
   display: flex;
   align-items: center;
 }
 
-.sidebar-menu .user-profile .small-icon {
-  width: 25px;
-  margin-right: 10px;
+.sidebar-menu .profile a {
+  display: flex;
+  align-items: center;
 }
+
 
 
 
@@ -209,12 +283,10 @@ main .column {
   justify-content: center;
   align-items: baseline;
   width: calc(100% / 6);
+  padding: 0 10px;
 }
 
-main h3,
-main h5 {
-  color: #FFF;
-}
+
 
 main .column .image-box {
   max-width: 180px;
@@ -383,7 +455,6 @@ footer .song-controls li:last-child{
 @media all and (max-width: 575.99px) {
 
   header, main section {
-    /* debug */
     margin-left: 30px;
   }
 
@@ -419,6 +490,10 @@ footer .song-controls li:last-child{
     padding-left: 0;
   }
 
+  .sidebar-menu .user-profile .separator {
+    margin-right: 0;
+  }
+
   .sidebar-menu .nav-links a:hover {
     padding-left: 0;
     border-left: 0;
@@ -431,4 +506,11 @@ footer .song-controls li:last-child{
   main .column {
     width: 50%;
   }
+
+  /* Footer */
+  footer .image-box {
+    display: none;
+  }
+
+
 }
