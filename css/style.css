@@ -503,6 +503,10 @@ footer .song-controls li:last-child{
     display: block;
   }
 
+  .sidebar-menu .profile a {
+    justify-content: center;
+  }
+
   main .column {
     width: 50%;
   }
