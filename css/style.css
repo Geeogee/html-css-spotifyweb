@@ -142,7 +142,7 @@ main section .text-container {
   padding: 10px;
 }
 
-/* Sidebar */
+/***** SIDEBAR *****/
 .sidebar-menu {
   height: calc(100vh - 100px);
   background-color: #000;
@@ -237,10 +237,19 @@ main section .text-container {
   padding: 5px 0;
 }
 
-.user-profile {
+.sidebar-menu .user-profile {
   padding-left: 20px;
   display: flex;
   flex-wrap: wrap;
+}
+
+.sidebar-menu .user-profile .small-icon.image-box {
+  background-color: #808080;
+  border-radius: 50%;
+}
+
+.sidebar-menu .user-profile span {
+  margin-left: 10px;
 }
 
 .sidebar-menu .user-profile .install-link,
@@ -268,7 +277,7 @@ main section .text-container {
   align-items: center;
 }
 
-/* Sections */
+/***** SECTIONS *****/
 main .container {
   display: flex;
   justify-content: flex-start;
@@ -277,10 +286,12 @@ main .container {
 
 main .column {
   display: flex;
-  justify-content: center;
-  align-items: baseline;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
   width: calc(100% / 6);
   padding: 0 10px;
+  text-align: center;
 }
 
 main .column .image-box {
@@ -288,6 +299,7 @@ main .column .image-box {
   min-width: 50px;
   text-align: center;
   position: relative;
+  cursor: pointer;
 }
 
 main .column .image-box .overlay {
@@ -314,6 +326,20 @@ main .column .image-box > img {
   max-width: 100%;
 }
 
+main .popular-artists .overlay,
+main .popular-artists .image-box > img {
+  border-radius: 50%;
+}
+
+main a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main section a:hover > span {
+  text-decoration: underline;
+}
+
 /* Footer */
 footer {
   min-height: 100px;
@@ -325,6 +351,7 @@ footer {
   z-index: 99;
   display: flex;
   justify-content: space-between;
+  font-size: 14px;
 }
 
 footer ul {
@@ -396,11 +423,16 @@ footer .fa-play-circle {
   font-size: 30px;
 }
 
+
 footer .player-bar {
   flex-basis: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+footer .player .player-bar li.time {
+  font-size: 10px;
 }
 
 footer .player .player-bar li:nth-child(2) {
@@ -420,6 +452,10 @@ footer .progress-bar .progress {
   height: 100%;
   border-radius: 5px;
   position: relative;
+}
+
+footer .progress-bar .progress:hover {
+  background-color: #adff2f;
 }
 
 footer .progress .circle {
@@ -500,8 +536,8 @@ footer .song-controls li:last-child{
     align-items: center;
   }
 
-  .container-playlist,
-  .user-profile,
+  .sidebar-menu .container-playlist,
+  .sidebar-menu .user-profile,
   .sidebar-menu .nav-links a{
     padding-left: 0;
   }
