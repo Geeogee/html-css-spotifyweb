@@ -27,6 +27,7 @@ h5 {
 /* margin left because of the side-menù in fixed */
 header, main section {
   margin-left: 200px;
+  transition: margin-left 1s;
 }
 
 main section {
@@ -144,7 +145,7 @@ main section .text-container {
 
 /***** SIDEBAR *****/
 .sidebar-menu {
-  height: calc(100vh - 100px);
+  min-height: calc(100vh - 100px);
   background-color: #000;
   width: 200px;
   position: fixed;
@@ -154,6 +155,7 @@ main section .text-container {
   display: flex;
   flex-direction: column;
   color: #7d7f84;
+  transition: width 1s;
 }
 
 .sidebar-menu a {
@@ -342,7 +344,7 @@ main section a:hover > span {
 
 /* Footer */
 footer {
-  min-height: 100px;
+  height: 100px;
   width: 100%;
   background-color: #282828;
   position: fixed;
@@ -352,6 +354,7 @@ footer {
   display: flex;
   justify-content: space-between;
   font-size: 14px;
+  transition: height .2s;
 }
 
 footer ul {
@@ -388,6 +391,10 @@ footer .song-descr .song-artist {
   flex-basis: 100%;
 }
 
+footer .song-descr .song-artist:hover {
+  text-decoration: underline;
+}
+
 footer .song-name,
 footer .player-actions,
 footer .player-bar,
@@ -399,6 +406,10 @@ footer .song-controls {
 footer .song-artist,
 footer .song-cta {
   color: #5a5a5a;
+}
+
+footer .song-cta i:hover {
+  color: #FFF;
 }
 
 /* Song player */
@@ -421,8 +432,12 @@ footer .player-actions li {
 
 footer .fa-play-circle {
   font-size: 30px;
+  transition: font-size .3s;
 }
 
+footer .fa-play-circle:hover {
+  font-size: 35px;
+}
 
 footer .player-bar {
   flex-basis: 100%;
@@ -473,11 +488,14 @@ footer .progress .circle {
 
 footer .song-controls {
   align-items: center;
+  flex-wrap: wrap;
 }
 
-footer .song-controls li:last-child{
+footer .song-controls li:last-child {
   width: 50%;
 }
+
+
 
 
 
@@ -568,5 +586,11 @@ footer .song-controls li:last-child{
     display: none;
   }
 
+}
 
+@media all and (max-height: 100px) {
+
+  footer {
+    height: 50px;
+  }
 }
