@@ -124,7 +124,7 @@ main {
   width: 40%;
   margin: 0 auto;
   background-color: #adff2f;
-  transition: width 1s;
+  transition: all 1s;
 
 }
 
@@ -136,6 +136,10 @@ main {
 main section {
   background-color: #141922;
   color: #7d7f84;
+}
+
+main section .text-container {
+  padding: 10px;
 }
 
 /* Sidebar */
@@ -182,7 +186,6 @@ main section {
   padding: 20px 0;
 }
 
-
 .sidebar-menu .nav-links a {
   padding-left: 20px;
   display: flex;
@@ -198,7 +201,6 @@ main section {
   border-left: 4px solid #adff2f;
   padding-left: 16px;
 }
-
 
 .container-playlist {
   padding-left: 20px;
@@ -266,12 +268,7 @@ main section {
   align-items: center;
 }
 
-
-
-
-
 /* Sections */
-
 main .container {
   display: flex;
   justify-content: flex-start;
@@ -286,12 +283,31 @@ main .column {
   padding: 0 10px;
 }
 
-
-
 main .column .image-box {
   max-width: 180px;
   min-width: 50px;
   text-align: center;
+  position: relative;
+}
+
+main .column .image-box .overlay {
+  background-color: rgba(0,0,0,.8);
+  color: #FFF;
+  font-size: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity .5s ease-in;
+}
+
+main .column .image-box:hover .overlay {
+  opacity: 1;
 }
 
 main .column .image-box > img {
