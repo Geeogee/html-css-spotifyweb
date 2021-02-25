@@ -237,6 +237,7 @@ main section .text-container {
 }
 
 .sidebar-menu .playlist-added {
+  list-style-type: none;
   overflow-y: auto;
 }
 
@@ -301,7 +302,6 @@ main .container {
 main .column {
   display: flex;
   flex-direction: column;
-  justify-content: baseline;
   align-items: center;
   width: calc(100% / 6);
   padding: 0 10px;
@@ -597,11 +597,12 @@ footer .song-controls li:last-child {
 }
 
 /* Playlist scroll media query */
-@media all and (max-height: 580px) {
+/* @media all and (max-height: 510px) {
+
   .sidebar-menu .playlist-added {
-    max-height: 25vh;
+    max-height: 30vh
   }
-}
+} */
 
 /* Footer media query */
 @media all and (max-height: 100px) {
