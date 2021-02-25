@@ -146,7 +146,7 @@ main section .text-container {
 
 /***** SIDEBAR *****/
 .sidebar-menu {
-  min-height: calc(100vh - 100px);
+  height: calc(100vh - 100px);
   background-color: #000;
   width: 200px;
   position: fixed;
@@ -208,22 +208,17 @@ main section .text-container {
 }
 
 /* Sidebar playlists */
-.container-playlist {
+.container-playlist-cta {
   padding-left: 20px;
-  /* takes all the empty space and pushes user
-  profile in the bottom of the side bar */
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
 }
 
-.container-playlist h3 {
+.container-playlist-cta h3 {
   text-transform: uppercase;
   font-size: 12px;
   margin-bottom: 10px;
 }
 
-.sidebar-menu .container-playlist .add-button {
+.sidebar-menu .container-playlist-cta .add-button {
   padding: 5px 10px;
   font-weight: 700;
   font-size: 20px;
@@ -232,16 +227,24 @@ main section .text-container {
   display: inline-block;
 }
 
-.sidebar-menu .container-playlist a:hover .add-button {
+.sidebar-menu .container-playlist-cta a:hover .add-button {
   background-color: #FFF;
 }
 
-.sidebar-menu .playlist-added {
-  list-style-type: none;
+.container-playlist {
+  padding-left: 20px;
+  /* takes all the empty space and pushes user
+  profile in the bottom of the side bar */
+  flex-grow: 1;
   overflow-y: auto;
+  min-height: 80px;
 }
 
-.sidebar-menu .playlist-added li {
+.sidebar-menu .container-playlist ul {
+  list-style-type: none;
+}
+
+.sidebar-menu .container-playlist li {
   padding: 5px 0;
 }
 
@@ -528,7 +531,6 @@ footer .song-controls li:last-child {
 
 }
 
-
 /* Media for devices < 576px */
 @media all and (max-width: 575.99px) {
 
@@ -594,12 +596,6 @@ footer .song-controls li:last-child {
     display: none;
   }
 
-}
-
-@media all and (max-height: 510px) {
-  .sidebar-menu .playlist-added {
-    max-height: 20vh;
-  }
 }
 
 /* Footer media query */
