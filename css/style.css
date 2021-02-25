@@ -614,6 +614,6 @@ footer .song-controls li:last-child {
 @media all and (max-height: 180px) {
   .upgrade-bar {
     opacity: 0;
-    visibility: hidden;
+    visibility: hidden; /* Setting visibility hidden so you can't clik the bar anymore */
   }
 }
