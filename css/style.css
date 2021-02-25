@@ -156,7 +156,7 @@ main section .text-container {
   display: flex;
   flex-direction: column;
   color: #7d7f84;
-  transition: width 1s;
+  transition: width .5s;
 }
 
 .sidebar-menu a {
@@ -320,32 +320,35 @@ main .column .image-box {
 }
 
 main .column .image-box .overlay {
-  background-color: rgba(0,0,0,.8);
+  background-color: rgba(0,0,0,.6);
   color: #FFF;
   font-size: 50px;
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
-  height: 100%;
+  height: 0%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 0;
-  transition: opacity .5s ease-in;
+  transition: opacity .5s ease-in, height .8s;
+
 }
 
 main .column .image-box:hover .overlay {
   opacity: 1;
+  height: 100%;
 }
 
 main .column .image-box > img {
   max-width: 100%;
+  display: block;
 }
 
-main .popular-artists .overlay,
-main .popular-artists .image-box > img {
+main .popular-artists .image-box {
   border-radius: 50%;
+  overflow: hidden;
 }
 
 main a {
@@ -550,7 +553,8 @@ footer .song-controls li:last-child {
     display: none;
   }
 
-  .sidebar-menu .container-playlist > * {
+  .sidebar-menu .container-playlist > *,
+  .sidebar-menu .container-playlist-cta {
     display: none;
   }
 
