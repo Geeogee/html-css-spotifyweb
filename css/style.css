@@ -237,7 +237,6 @@ main section .text-container {
 }
 
 .sidebar-menu .playlist-added {
-  list-style-type: none;
   overflow-y: auto;
 }
 
