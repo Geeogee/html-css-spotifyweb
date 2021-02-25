@@ -237,7 +237,9 @@ main section .text-container {
 }
 
 .sidebar-menu .playlist-added {
+  list-style-type: none;
   overflow-y: auto;
+  transition: max-height 1s;
 }
 
 .sidebar-menu .playlist-added li {
@@ -597,7 +599,7 @@ footer .song-controls li:last-child {
 }
 
 /* Playlist scroll media query */
-@media all and (max-height: 580px) {
+@media all and (max-height: 510px) {
   .sidebar-menu .playlist-added {
     max-height: 25vh;
   }
