@@ -605,7 +605,7 @@ footer .song-controls li:last-child {
 
 /* Footer media query */
 @media all and (max-height: 100px) {
-
+  
   footer {
     height: 50px;
   }
@@ -616,4 +616,5 @@ footer .song-controls li:last-child {
     opacity: 0;
     visibility: hidden; /* Setting visibility hidden so you can't clik the bar anymore */
   }
+
 }
